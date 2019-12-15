@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>长春轻轨web项目技术栈 | 叶叶的博客</title>
+    <meta name="description" content="叶叶的博客,柳琴音，lanye233">
+    <link rel="icon" href="./img/194_6.jpg">
+    
+    <link rel="preload" href="/assets/css/0.styles.707ac4cd.css" as="style"><link rel="preload" href="/assets/js/app.48768427.js" as="script"><link rel="preload" href="/assets/js/2.0ca49dba.js" as="script"><link rel="preload" href="/assets/js/8.0cfbf868.js" as="script"><link rel="prefetch" href="/assets/js/10.df9960ac.js"><link rel="prefetch" href="/assets/js/11.3a7c8d33.js"><link rel="prefetch" href="/assets/js/12.45feeddc.js"><link rel="prefetch" href="/assets/js/13.c217754c.js"><link rel="prefetch" href="/assets/js/14.1d643e5a.js"><link rel="prefetch" href="/assets/js/3.2e1f9c37.js"><link rel="prefetch" href="/assets/js/4.21c6e178.js"><link rel="prefetch" href="/assets/js/5.6448c381.js"><link rel="prefetch" href="/assets/js/6.000912df.js"><link rel="prefetch" href="/assets/js/7.0c94b7d4.js"><link rel="prefetch" href="/assets/js/9.865186fd.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.707ac4cd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">叶叶的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Art/" class="nav-link">绘画与设计</a></div><div class="nav-item"><a href="/CS/2019/长春轻轨web项目技术栈.html" class="nav-link">CS</a></div><div class="nav-item"><a href="/Thoughts/" class="nav-link">随笔</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="GitHub" class="dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/lanye233" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub首页
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Others" class="dropdown-title"><span class="title">Others</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/lanye233" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.chuangkit.com/designerCenter?designer_id=1402158" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  创客贴
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.zcool.com.cn/u/14678162" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  站酷
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Art/" class="nav-link">绘画与设计</a></div><div class="nav-item"><a href="/CS/2019/长春轻轨web项目技术栈.html" class="nav-link">CS</a></div><div class="nav-item"><a href="/Thoughts/" class="nav-link">随笔</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="GitHub" class="dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/lanye233" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub首页
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Others" class="dropdown-title"><span class="title">Others</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/lanye233" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.chuangkit.com/designerCenter?designer_id=1402158" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  创客贴
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.zcool.com.cn/u/14678162" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  站酷
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>计算机</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/CS/2019/长春轻轨web项目技术栈.html" class="active sidebar-link">长春轻轨web项目技术栈</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/CS/2019/长春轻轨web项目技术栈.html#一、运用框架、api" class="sidebar-link">一、运用框架、API</a></li><li class="sidebar-sub-header"><a href="/CS/2019/长春轻轨web项目技术栈.html#二、项目结构" class="sidebar-link">二、项目结构</a></li><li class="sidebar-sub-header"><a href="/CS/2019/长春轻轨web项目技术栈.html#三、整体功能" class="sidebar-link">三、整体功能</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/CS/2019/长春轻轨web项目技术栈.html#（1）、点击线路，出现线路所属车辆" class="sidebar-link">（1）、点击线路，出现线路所属车辆</a></li><li class="sidebar-sub-header"><a href="/CS/2019/长春轻轨web项目技术栈.html#（2）、vuex-状态管理" class="sidebar-link">（2）、Vuex 状态管理</a></li><li class="sidebar-sub-header"><a href="/CS/2019/长春轻轨web项目技术栈.html#（3）、h-264-裸流视频播放" class="sidebar-link">（3）、H.264 裸流视频播放</a></li><li class="sidebar-sub-header"><a href="/CS/2019/长春轻轨web项目技术栈.html#（4）、axios-进行-http-请求" class="sidebar-link">（4）、axios 进行 http 请求</a></li></ul></li><li class="sidebar-sub-header"><a href="/CS/2019/长春轻轨web项目技术栈.html#四、其他" class="sidebar-link">四、其他</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/CS/2019/长春轻轨web项目技术栈.html#_1-学到的一些基础知识点：" class="sidebar-link">1.学到的一些基础知识点：</a></li><li class="sidebar-sub-header"><a href="/CS/2019/长春轻轨web项目技术栈.html#_2-不足与可改进之处：" class="sidebar-link">2.不足与可改进之处：</a></li></ul></li></ul></li><li><a href="/CS/2019/vuex状态管理实操笔记.html" class="sidebar-link">vuex状态管理实操笔记</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="长春轻轨web项目技术栈"><a href="#长春轻轨web项目技术栈" class="header-anchor">#</a> 长春轻轨web项目技术栈</h1> <h2 id="一、运用框架、api"><a href="#一、运用框架、api" class="header-anchor">#</a> 一、运用框架、API</h2> <ul><li>Vue</li> <li>Vuex</li> <li>百度地图接口</li> <li>element</li></ul> <h2 id="二、项目结构"><a href="#二、项目结构" class="header-anchor">#</a> 二、项目结构</h2> <ul><li>布局
+<ul><li>左侧百度地图接口</li> <li>右侧垂直导航栏</li></ul></li> <li>功能
+<ul><li>实时数据</li> <li>视频数据</li> <li>地图坐标查询</li></ul></li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>├─components
+│ Aircondition.vue
+│ BaiduMap.vue
+│ Car.vue
+│ CurrentFault.vue
+│ DashBoard.vue //速度仪表盘
+│ Device.vue
+│ Door.vue
+│ Electric.vue
+│ FaultPage.vue
+│ History.vue
+│ HistoryFault.vue
+│ Interface.vue //弹出窗口主界面
+│ main.vue //入口文件
+│ Modal.vue
+│ Net.vue
+│ ProgressBar.vue //自定义双端进度条
+│ Video.vue
+│ WindowFrame.vue //弹出窗口
+│
+├─css
+│ demo.css
+│
+├─entity
+│ singleCar.js
+│ singleFault.js
+│
+├─router
+│ index.js
+│
+├─service
+│ AnalysisMsg.js //实时数据websocket连接所用函数
+│ WebSocket.js //实时数据websocket连接
+│ wfs.js //wfs连接视频端口，解码246流
+│
+└─store
+│ store.js //vuex管理状态
+│
+└─modules
+airStore.js
+carStore.js
+deviceStore.js
+doorStore.js
+electricStore.js
+faultStore.js
+headInfoStore.js
+interfaceStore.js
+netStore.js
+stateInfoStore.js
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br></div></div><h2 id="三、整体功能"><a href="#三、整体功能" class="header-anchor">#</a> 三、整体功能</h2> <h3 id="（1）、点击线路，出现线路所属车辆"><a href="#（1）、点击线路，出现线路所属车辆" class="header-anchor">#</a> （1）、点击线路，出现线路所属车辆</h3> <h4 id="_1-车辆列表（总表和显示表）："><a href="#_1-车辆列表（总表和显示表）：" class="header-anchor">#</a> 1.车辆列表（总表和显示表）：</h4> <p>var car_list = new Array(); <em>//车辆列表</em></p> <p>var show_list = new Array()</p> <p>car_list[0] = new singleCar(1,8888)</p> <p>car_list[1] = new singleCar(1,7777)</p> <p>car_list[2] = new singleCar(2,6666)</p> <p>car_list[3] = new singleCar(3,5555)</p> <p>car_list[4] = new singleCar(3,4444)</p> <p>car_list[5] = new singleCar(4,3333)</p> <h4 id="_2-车辆实体："><a href="#_2-车辆实体：" class="header-anchor">#</a> 2.车辆实体：</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>//singleCar.js
+function singleCar(carLine, carNumber, mode) {
+  this.carLine = carLine
+  this.carNumber = carNumber
+  this.mode = &quot;离线&quot;
+}
+export {
+  singleCar,
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h4 id="_3-点击线路，将该线路车辆加入到显示列表："><a href="#_3-点击线路，将该线路车辆加入到显示列表：" class="header-anchor">#</a> 3.点击线路，将该线路车辆加入到显示列表：</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>getCars(i){
+  this.carLineIndex = i;
+  show_list.length = 0
+  this.setState()
+  console.log(&quot;--------------------------------------------------------------------选择线路:&quot;+this.carLineIndex)
+  for(var j=0;j&lt;car_list.length;j++){
+    if(car_list[j].carLine == i){
+      show_list.push(car_list[j])
+    }
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h4 id="_4-点击具体车辆，检查车辆-mode，为运行时发送请求实时数据，并将车号-carnumber-传到新建小窗口页面："><a href="#_4-点击具体车辆，检查车辆-mode，为运行时发送请求实时数据，并将车号-carnumber-传到新建小窗口页面：" class="header-anchor">#</a> 4.点击具体车辆，检查车辆 mode，为运行时发送请求实时数据，并将车号 carNumber 传到新建小窗口页面：</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;el-submenu index=&quot;1&quot;&gt;
+&lt;template slot=&quot;title&quot;&gt;&lt;i class=&quot;el-icon-truck&quot;&gt;&lt;/i&gt;机车查询结果列表&lt;/template&gt;
+&lt;el-menu-item
+v-for=&quot;(item) in show_list&quot;
+v-bind:key=&quot;item.carNumber&quot;
+@click=&quot; (item.mode == '运行') ? false:true &amp;&amp; sendMessage(JSON.stringify({type:3,carNum:item.carNumber}))&quot;
+@click.native=&quot;showOne(item.mode,item.carNumber)&quot;
+&gt;{{item.carNumber}}&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;{{item.mode}}&lt;/el-menu-item&gt;
+&lt;/el-submenu&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="（2）、vuex-状态管理"><a href="#（2）、vuex-状态管理" class="header-anchor">#</a> （2）、Vuex 状态管理</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>import Vue from 'vue'
+const state = {
+  test:[]
+  //这里填写参数信息
+}
+const getters = {
+  test: (state) =&gt; {
+    return state.test
+  }
+}
+const actions = {
+}
+const mutations = {
+  //这里写你的函数
+  createInfo(state) {
+    Vue.set(state.test, 0, &quot;测试&quot;)
+    //由于 Vue 不能检测到对象属性的添加或删除，所以不能用 test[0]=&quot;测试&quot;这种方式为参数添加新属性或新值。
+  }
+}
+export default {
+  state,
+  getters,
+  actions,
+  mutations,
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><h3 id="（3）、h-264-裸流视频播放"><a href="#（3）、h-264-裸流视频播放" class="header-anchor">#</a> （3）、H.264 裸流视频播放</h3> <p>用到了 github 上的 <a href="https://github.com/ChihChengYang" target="_blank" rel="noopener noreferrer">ChihChengYang<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 的 <a href="https://github.com/ChihChengYang/wfs.js" target="_blank" rel="noopener noreferrer">wfs.js<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 和 <a href="https://github.com/ChihChengYang/wfs.js/blob/master/demo/index.html" target="_blank" rel="noopener noreferrer">index.html<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h4 id="_1-在-vue-中可以这样写视频页："><a href="#_1-在-vue-中可以这样写视频页：" class="header-anchor">#</a> 1.在 Vue 中可以这样写视频页：</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div id=&quot;Video&quot;&gt;
+    &lt;div id=&quot;videoBorder&quot;&gt;
+      &lt;video id=&quot;video1&quot; width=&quot;640&quot; height=&quot;480&quot; autoplay&gt;&lt;/video&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;  
+import wfs from '../service/wfs.js'
+import {split,initWebpack,websocketSend, websocket} from '../service/WebSocket'
+window.onload = function() {
+            if (Wfs.isSupported()) {
+                var video1 = document.getElementById(&quot;video1&quot;),
+                    wfs = new Wfs();
+                wfs.attachMedia(video1, 'ch1');
+            }
+        };
+...
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h4 id="_2-然后在你添加到项目中的-wfs-js-文件中更改你的-websocket-连接路径，搜索-onmediaattached-找到创建-websocket-的函数，按以下方式修改："><a href="#_2-然后在你添加到项目中的-wfs-js-文件中更改你的-websocket-连接路径，搜索-onmediaattached-找到创建-websocket-的函数，按以下方式修改：" class="header-anchor">#</a> 2.然后在你添加到项目中的 wfs.js 文件中更改你的 websocket 连接路径，搜索 onMediaAttached 找到创建 websocket 的函数，按以下方式修改：</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>key: 'onMediaAttached',
+value: function onMediaAttached(data) {
+    if (data.websocketName != undefined) {
+        var url = &quot;你的连接地址&quot;
+        var client = new WebSocket(url)
+        //clientSocket = client
+        //(如果你要调用wfs.js中的websocket发送函数，你需要用到这行代码)
+        this.wfs.attachWebsocket(client, data.channelName);
+    } else {
+        console.log('websocketName ERROE!!!');
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><ul><li>去掉缓存：注释 onSBUpdateEnd 方法里的 this.mediaSource.endOfStream() 和 that.media.play()这两行，然后在 video 标签里加上 autoplay，去掉 controls。</li> <li>调整播放速度：将 this.H264_TIMEBASE = 3000 中的数值改为 4500（或其他你觉得合适的数值），有两个地方需要修改。</li></ul> <h4 id="_3-现在你就可以在浏览器上运行你的项目，看看是否有画面出现。在项目试验过程中可能出现以下问题："><a href="#_3-现在你就可以在浏览器上运行你的项目，看看是否有画面出现。在项目试验过程中可能出现以下问题：" class="header-anchor">#</a> 3.现在你就可以在浏览器上运行你的项目，看看是否有画面出现。在项目试验过程中可能出现以下问题：</h4> <ol><li>花屏：可能是服务端出了问题，可以在服务端写文件进行测试。</li> <li>可能会出现 mediaError 的打印日志，但并不影响画面播放。</li></ol> <h4 id="_4-如果你想在外部调用-websocket-发送你的项目所要求的请求视频数据，请接着看。"><a href="#_4-如果你想在外部调用-websocket-发送你的项目所要求的请求视频数据，请接着看。" class="header-anchor">#</a> 4.如果你想在外部调用 websocket 发送你的项目所要求的请求视频数据，请接着看。</h4> <p>（参考网址： <a href="https://blog.csdn.net/weixin_43694639/article/details/88723280" target="_blank" rel="noopener noreferrer">JS如何在外部调用函数内部的函数<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> ）</p> <ul><li>下面是接受 H.264 裸流并进行转化的函数：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>key: 'receiveSocketMessage',
+value: function receiveSocketMessage(event) {
+    this.buf = new Uint8Array(event.data);
+    var copy = new Uint8Array(this.buf);
+    if (this.mediaType === 'FMp4') {
+        this.wfs.trigger(_events2.default.WEBSOCKET_ATTACHED, { payload: copy });
+    }
+    if (this.mediaType === 'H264Raw') {
+        this.wfs.trigger(_events2.default.H264_DATA_PARSING, { data: copy });
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><ul><li>在整个 wfs.js 文件函数的最外层定义变量：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>var sendMsg;
+var clientSocket;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ul><li>在 send 函数中赋值：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>key: 'onWebsocketMessageSending',
+value: function onWebsocketMessageSending(i) {
+    clientSocket.send(i)
+    console.log('发送数据：' + i)
+        //this.client.send(i)
+        //this.client.send(JSON.stringify({ type: 2, carNum: 8888 }))
+    sendMsg = onWebsocketMessageSending
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><ul><li>在函数最后 export 出去：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>export {
+    sendMsg,
+    clientSocket,
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ul><li>在你想调用的页面 import：</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>import {sendMsg,clientSocket} from '../service/wfs.js'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><blockquote><p>使用过程中的提问和解答：<a href="https://github.com/ChihChengYang/wfs.js/issues/31" target="_blank" rel="noopener noreferrer">https://github.com/ChihChengYang/wfs.js/issues/31<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <h3 id="（4）、axios-进行-http-请求"><a href="#（4）、axios-进行-http-请求" class="header-anchor">#</a> （4）、axios 进行 http 请求</h3> <p>1.在 main.js 中添加以下代码：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//main.js
+import axios from 'axios'
+Vue.prototype.$http = axios;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>2.新建 http.js 文件：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//http.js
+import axios from 'axios'
+export default {
+    install(Vue) {
+        //install方法，向Vue实例中添加一个$http方法
+        Vue.prototype.$http = axios
+        Vue.$http = axios
+    },
+    $http: axios
+}
+export const Http = axios
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>3.在要进行 http 请求的页面写请求方法：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>//http请求方法
+requestData:function(){
+      console.log('http请求,'+'time:'+this.duration);
+      console.log('url:'+url+this.className)
+      this.$http.get(
+        url,
+        {
+          params:{
+            date1:this.duration[0],
+            date2:this.duration[1],
+          }
+        }    
+      )
+        .then(res =&gt; {
+          var ans = res.data;
+          console.log('res.data:'+res.data);
+          console.log('value0:'+this.duration);
+          if(res.data.code == '0'){
+            console.log('yes');
+          }else{
+            alert('数据不存在');
+          }
+        })
+        .catch(err =&gt; {
+          alert('请求失败！');
+        })
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><blockquote><p>P.s. 根据项目需求，具体的请求方法参数会不一样。</p></blockquote> <h2 id="四、其他"><a href="#四、其他" class="header-anchor">#</a> 四、其他</h2> <h3 id="_1-学到的一些基础知识点："><a href="#_1-学到的一些基础知识点：" class="header-anchor">#</a> 1.学到的一些基础知识点：</h3> <ul><li>CSS 中的 position 定位：relative&amp;absolute</li></ul> <h3 id="_2-不足与可改进之处："><a href="#_2-不足与可改进之处：" class="header-anchor">#</a> 2.不足与可改进之处：</h3> <ul><li>主界面的车辆车门，用 flex 布局或网格布局会更好</li> <li>网络界面，选定布局，由大到小来画会更有规律，更好修改</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/CS/2019/vuex状态管理实操笔记.html">vuex状态管理实操笔记</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.48768427.js" defer></script><script src="/assets/js/2.0ca49dba.js" defer></script><script src="/assets/js/8.0cfbf868.js" defer></script>
+  </body>
+</html>

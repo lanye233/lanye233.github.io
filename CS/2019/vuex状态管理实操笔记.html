@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vuex状态管理实操笔记 | 叶叶的博客</title>
+    <meta name="description" content="叶叶的博客,柳琴音，lanye233">
+    <link rel="icon" href="./img/194_6.jpg">
+    
+    <link rel="preload" href="/assets/css/0.styles.707ac4cd.css" as="style"><link rel="preload" href="/assets/js/app.48768427.js" as="script"><link rel="preload" href="/assets/js/2.0ca49dba.js" as="script"><link rel="preload" href="/assets/js/7.0c94b7d4.js" as="script"><link rel="prefetch" href="/assets/js/10.df9960ac.js"><link rel="prefetch" href="/assets/js/11.3a7c8d33.js"><link rel="prefetch" href="/assets/js/12.45feeddc.js"><link rel="prefetch" href="/assets/js/13.c217754c.js"><link rel="prefetch" href="/assets/js/14.1d643e5a.js"><link rel="prefetch" href="/assets/js/3.2e1f9c37.js"><link rel="prefetch" href="/assets/js/4.21c6e178.js"><link rel="prefetch" href="/assets/js/5.6448c381.js"><link rel="prefetch" href="/assets/js/6.000912df.js"><link rel="prefetch" href="/assets/js/8.0cfbf868.js"><link rel="prefetch" href="/assets/js/9.865186fd.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.707ac4cd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">叶叶的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/Art/" class="nav-link">绘画与设计</a></div><div class="nav-item"><a href="/CS/2019/长春轻轨web项目技术栈.html" class="nav-link">CS</a></div><div class="nav-item"><a href="/Thoughts/" class="nav-link">随笔</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="GitHub" class="dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/lanye233" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub首页
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Others" class="dropdown-title"><span class="title">Others</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/lanye233" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.chuangkit.com/designerCenter?designer_id=1402158" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  创客贴
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.zcool.com.cn/u/14678162" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  站酷
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Art/" class="nav-link">绘画与设计</a></div><div class="nav-item"><a href="/CS/2019/长春轻轨web项目技术栈.html" class="nav-link">CS</a></div><div class="nav-item"><a href="/Thoughts/" class="nav-link">随笔</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="GitHub" class="dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/lanye233" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub首页
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Others" class="dropdown-title"><span class="title">Others</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/lanye233" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.chuangkit.com/designerCenter?designer_id=1402158" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  创客贴
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.zcool.com.cn/u/14678162" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  站酷
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>计算机</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/CS/2019/长春轻轨web项目技术栈.html" class="sidebar-link">长春轻轨web项目技术栈</a></li><li><a href="/CS/2019/vuex状态管理实操笔记.html" class="active sidebar-link">vuex状态管理实操笔记</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/CS/2019/vuex状态管理实操笔记.html#_1-首先创建如下的目录：" class="sidebar-link">1. 首先创建如下的目录：</a></li><li class="sidebar-sub-header"><a href="/CS/2019/vuex状态管理实操笔记.html#_2-编写参数绑定的vue页面：" class="sidebar-link">2.编写参数绑定的vue页面：</a></li><li class="sidebar-sub-header"><a href="/CS/2019/vuex状态管理实操笔记.html#_3-编写单独的store参数页面：" class="sidebar-link">3.编写单独的store参数页面：</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vuex状态管理实操笔记"><a href="#vuex状态管理实操笔记" class="header-anchor">#</a> vuex状态管理实操笔记</h1> <blockquote><p>当你有很多参数状态需要实时改变时，你可以用vuex来管理。</p></blockquote> <h2 id="_1-首先创建如下的目录："><a href="#_1-首先创建如下的目录：" class="header-anchor">#</a> 1. 首先创建如下的目录：</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>└─store
+    │ store.js
+    │
+    └─modules
+            prop1Store.js
+            prop2Store.js
+            …
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>//store.js
+import Vue from 'vue'
+import Vuex from 'vuex'
+import prop1Store from './modules/prop1Store'
+import prop2Store from './modules/prop2Store'
+
+Vue.use(Vuex);
+
+export default new Vuex.Store({
+    modules: {
+        prop1Store,
+        prop2Store
+    },
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="_2-编写参数绑定的vue页面："><a href="#_2-编写参数绑定的vue页面：" class="header-anchor">#</a> 2.编写参数绑定的vue页面：</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>//prop1.vue
+//在template标签内参数绑定方式
+$store.state.prop1Store.Prop1[0]
+//1.{{}}中进行数据绑定；2.：class绑定；etc.
+
+//在script标签内
+import store from '../store/store'
+import {mapState,mapMutations,mapGetters} from 'vuex'
+export default {
+    data() {
+      return {
+        
+      }
+    },
+    computed:{
+        ...mapGetters(['Prop1','Prop2'])
+    },
+    destroyed(){
+    },
+    methods:{
+        ...mapMutations([
+            'changeInfo'
+        ]),
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br></div></div><h2 id="_3-编写单独的store参数页面："><a href="#_3-编写单独的store参数页面：" class="header-anchor">#</a> 3.编写单独的store参数页面：</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>//prop1Store.js
+import Vue from 'vue'
+const state = {
+    prop1:[]
+    //这里填写参数信息,可填写多个，多种类型
+}
+const getters = {
+    prop1: (state) =&gt; {
+        return state.prop1
+    }
+}
+const actions = {
+
+}
+const mutations = {
+    //这里写你的函数
+    changeState(state) {
+    //当flag为true时，每秒触发一次createInfo函数
+        setInterval(() =&gt; {
+            if (flag) {
+                this.commit('createInfo')//在vuex中调用函数的方式
+            } else {                
+            //console.log(&quot;--------&quot;+)
+        }, 1000)
+    },
+    createInfo(state) {
+        Vue.set(state.test, 0, &quot;测试&quot;)
+        //由于Vue不能检测到对象属性的添加或删除，所以不能用test[0]=&quot;测试&quot;这种方式为参数添加新属性或新值。
+    }
+    changeInfo(state){
+        
+    }
+}
+export default {
+    state,
+    getters,
+    actions,
+    mutations,
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br></div></div><h4 id="tips：灵活运用三目运算符！"><a href="#tips：灵活运用三目运算符！" class="header-anchor">#</a> Tips：灵活运用三目运算符！</h4></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/CS/2019/长春轻轨web项目技术栈.html" class="prev">长春轻轨web项目技术栈</a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.48768427.js" defer></script><script src="/assets/js/2.0ca49dba.js" defer></script><script src="/assets/js/7.0c94b7d4.js" defer></script>
+  </body>
+</html>
